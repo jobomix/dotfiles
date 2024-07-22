@@ -5,4 +5,7 @@ return {
     require('lazydocker').setup {}
   end,
   event = 'BufRead', -- or any other event you might want to use.
+  keys = {
+    { '<leader>ld', '<cmd>Lazydocker<cr>', desc = 'Lazy Docker' },
+  },
 }

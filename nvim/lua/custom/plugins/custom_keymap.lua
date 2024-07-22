@@ -6,9 +6,6 @@ return {
   vim.keymap.set('n', '<A-n>', '<cmd>bnext<CR>'),
   vim.keymap.set('n', '<A-p>', '<cmd>bprevious<CR>'),
 
-  vim.keymap.set('n', '<leader>mr', ':lua require("neotest").run.run()<CR>', { noremap = true, silent = true }),
-  vim.keymap.set('n', '<leader>mo', ':lua require("neotest").output.open()<CR>', { noremap = true, silent = true }),
-
   vim.keymap.set('n', '<leader>ve', function()
     local venv = vim.fn.system { 'poetry', 'env', 'info', '-p' }
     local path = string.format('%s/bin/python', string.gsub(venv, '%c', ''))
