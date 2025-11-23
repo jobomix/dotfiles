@@ -13,7 +13,9 @@ return {
 			log_level = vim.log.levels.DEBUG,
 			adapters = {
 				require("neotest-vitest"),
-				require("neotest-python"),
+				require("neotest-python")({
+					args = { "-s" },
+				}),
 			},
 		})
 	end,
@@ -43,5 +45,11 @@ return {
 		"<leader>tf",
 		':lua require("neotest").run.run(vim.fn.expand("%"))<CR>',
 		{ desc = "Run all tests in [F]ile", noremap = true, silent = true }
+	),
+	vim.keymap.set(
+		"n",
+		"<leader>ts",
+		':lua require("neotest").stop()<CR>',
+		{ desc = "Stop running tests", noremap = true, silent = true }
 	),
 }
