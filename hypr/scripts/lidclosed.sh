@@ -2,5 +2,5 @@
 
 if [ "$(acpi -a)" == "Adapter 0: on-line" ]
 then
-hyprctl keyword monitor "eDP-1, disable"
+hyprctl --instance 0 dispatch 'hl.monitor({output="eDP-1",disabled=true})'
 fi

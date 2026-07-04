@@ -2,18 +2,23 @@ return {
   "nvim-neotest/neotest",
   dependencies = {
     "nvim-neotest/nvim-nio",
-    "marilari88/neotest-vitest",
-    "nvim-neotest/neotest-python",
     "nvim-lua/plenary.nvim",
     "antoinemadec/FixCursorHold.nvim",
     "nvim-treesitter/nvim-treesitter",
+    "marilari88/neotest-vitest",
+    "nvim-neotest/neotest-python",
+    "codymikol/neotest-kotlin",
+    "nvim-neotest/neotest-jest",
+    "thenbe/neotest-playwright",
   },
   config = function()
     require("neotest").setup({
       log_level = vim.log.levels.DEBUG,
       adapters = {
         require("neotest-vitest"),
+        require("neotest-kotlin"),
         require("neotest-python")({
+          runner = "pytest",
           args = { "-s" },
         }),
       },
@@ -26,6 +31,7 @@ return {
     ':lua require("neotest").run.run()<CR>',
     { desc = "Run test [m]ethod above the cursor", noremap = true, silent = true }
   ),
+
   vim.keymap.set(
     "n",
     "<leader>to",

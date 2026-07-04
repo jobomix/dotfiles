@@ -12,38 +12,47 @@ x = 7
 y = 7
 
 [colors.primary]
-background = '#0E1415'
-foreground = '#CECECE'
-
-[colors.cursor]
-text = '#0E1415'
-cursor = '#CECECE'
+background = "#1a1b26"
+foreground = "#c0caf5"
 
 [colors.normal]
-black = '#0E1415'
-red = '#e25d56'
-green = '#73ca50'
-yellow = '#e9bf57'
-blue = '#4a88e4'
-magenta = '#915caf'
-cyan = '#23acdd'
-white = '#f0f0f0'
+black   = "#15161e"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#a9b1d6"
 
 [colors.bright]
-black = '#777777'
-red = '#f36868'
-green = '#88db3f'
-yellow = '#f0bf7a'
-blue = '#6f8fdb'
-magenta = '#e987e9'
-cyan = '#4ac9e2'
-white = '#FFFFFF'
+black   = "#414868"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#c0caf5"   
 
 [font]
-size=12.0
+size = 12.0
 
 [font.normal]
-family = "terminal-font"
+family = "Monospace"
+style = "Regular"
+
+[font.bold]
+family = "Monospace"
+style = "Bold"
+
+[font.italic]
+family = "Monospace"
+style = "Italic"
+
+[font.bold_italic]
+family = "Monospace"
+style = "Bold Italic"   
 
 [general]
 live_config_reload = true
